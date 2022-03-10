@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        width: 300px;
+        height: 300px;
+        margin:100px auto;
+    }
+
+    #main img{
+        width: 100%;
+    }
+</style>
+<body onload="muda1()">
+    <div id="main">
+         <img id="banner" src="img/sm1.jpg" alt="">
+    </div>
+
+
+    <script>
+        let intervalo = 3000
+
+        function muda1(){
+            document.getElementById("banner").src = "img/sm1.jpg"
+             setTimeout("muda2()",intervalo)
+        }
+
+        function muda2(){
+            document.getElementById("banner").src = "img/sm4.jpg"
+            setTimeout("muda3()",intervalo)
+        }
+
+
+        function muda3(){
+            document.getElementById("banner").src = "img/sm3.jpg"
+            setTimeout("muda1()",intervalo)
+        }
+
+       
+
+
+
+
+    </script>
+</body>
+</html>
